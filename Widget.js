@@ -74,13 +74,13 @@ define([
 			for (var i = 0; i < this.map.layerIds.length; i++) {
 				var id = this.map.layerIds[i];
 				if (id.match(/vectorial/i)) {
-					var satelital = this.map.getLayer(id);
+					var vectorial = this.map.getLayer(id);
 				}
 			}
-			if(satelital.opacity == 1){
+			if(vectorial.opacity == 1){
 				chkbox.setAttribute('disabled', true);
 			}
-			satelital.on('opacity-change', lang.hitch(this, function (opacityObj) {
+			vectorial.on('opacity-change', lang.hitch(this, function (opacityObj) {
 					//enable or disable checkBox depending satellital layer opacity
 					var state = this.checkbox.get('checked');
 					
