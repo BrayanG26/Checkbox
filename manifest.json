@@ -1,0 +1,13 @@
+{
+  "name": "Checkbox",
+  "platform": "HTML",
+  "version": "2.2",
+  "wabVersion": "2.2",
+  "author": "Esri R&D Center Beijing",
+  "description": "Set the scale in the map",
+  "copyright": "",
+  "license": "http://www.apache.org/licenses/LICENSE-2.0",
+  "properties": {
+    "inPanel": false
+  }
+}

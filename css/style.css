@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:700');
+
+.dijitButtonText {
+    width: 100%;
+}
+
+.dijitMenuItemLabel {
+    text-align: center;
+}
+.jimu-widget-checkbox #container{
+	background-color: rgba(207, 215, 204, 0.6);
+	border-radius: 3px;
+	border: 1px solid #242424;
+	width: 156px;
+    height: 19px;
+}
+.jimu-widget-checkbox #checkBox{
+	left:10px;
+}
+/* .jimu-widget-checkbox #img{
+	display: none;
+} */
+.jimu-widget-checkbox #information{
+	text-align: left;
+	padding-left:20px;
+}
+.jimu-widget-checkbox #info{
+	display: inline;
+	font-family: 'Roboto', sans-serif;
+}
