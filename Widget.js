@@ -77,7 +77,7 @@ define([
 					var vectorial = this.map.getLayer(id);
 				}
 			}
-			if(vectorial.opacity == 1){
+			if(vectorial.opacity > 0.1){
 				chkbox.setAttribute('disabled', true);
 			}
 			vectorial.on('opacity-change', lang.hitch(this, function (opacityObj) {
@@ -169,19 +169,20 @@ define([
 					idLayer = id;
 				}
 			});
-
 			var layer = this.map.getLayer(idLayer);
 			app.url = layer.url;
 			identifyTask = new IdentifyTask(layer.url);
 			identifyParams = new IdentifyParameters();
 			identifyParams.tolerance = 3;
-			identifyParams.layerIds = [8, 9, 10, 11, 12, 13, 14];
-			identifyParams.layerOption = IdentifyParameters.LAYER_OPTION_VISIBLE;
+			identifyParams.layerIds = [10,11,12,13,14,15,16];
+			identifyParams.layerOption = IdentifyParameters.LAYER_OPTION_ALL;
 
 			identifyParams.geometry = event.mapPoint;
 			identifyParams.mapExtent = this.map.extent;
 			identifyTask.execute(identifyParams, function (response) {
+				console.info(response);
 				var url = app.url + '/' + response[0].layerId;
+				console.info(url);
 				var request = esriRequest({
 						url: url,
 						content: {
