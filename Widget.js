@@ -180,9 +180,7 @@ define([
 			identifyParams.geometry = event.mapPoint;
 			identifyParams.mapExtent = this.map.extent;
 			identifyTask.execute(identifyParams, function (response) {
-				console.info(response);
 				var url = app.url + '/' + response[0].layerId;
-				console.info(url);
 				var request = esriRequest({
 						url: url,
 						content: {
